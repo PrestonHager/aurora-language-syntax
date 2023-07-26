@@ -1,0 +1,63 @@
+{
+	"name": "Aurora",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#functions"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.aurora",
+					"match": "//.*$"
+				},
+				{
+					"name": "comment.block.aurora",
+					"match": "/\\*(\\n|.)*?\\*/"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.aurora",
+					"match": "\\b(if|while|for|return|func)\\b"
+				},
+				{
+					"name": "keyword.operator.new.aurora",
+					"match": "\\b\\?(=|!=|>|<|>=|<=)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.aurora",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.aurora",
+					"match": "\\\\."
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "variable.name.aurora",
+					"match": "[a-zA-Z\\_][a-zA-Z0-9\\_]*\\>"
+				}
+			]
+		}
+	},
+	"scopeName": "source.aurora"
+}

@@ -1,0 +1,27 @@
+// This file show cases the entire Aurora language syntax
+// It was made for the purpose of testing the syntax highlighter
+
+// Define greet function
+func greet>name::String => Void;
+  print>"Hello, ";
+  println>name;
+  return Void;
+end;
+
+greet>"Preston";
+
+if> age + 5 ?> 20; then;
+  println>"You are old";
+else;
+  println>"You are young";
+end;
+
+// Define a list.
+String{2}: greeting = {"Hello from "};
+// and print out the first item
+print>greeting{0};
+
+// Now try pushing to the list
+greeting.push>"Aurora!";
+// and print out the second pushed item
+println>greeting{1};
